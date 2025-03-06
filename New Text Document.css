@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eef2f3;
+    color: #333;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #3751FF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.quote {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.user-info {
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Skills */
+.skill-bar {
+    margin-bottom: 10px;
+}
+
+.bar {
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+}
+
+.fill {
+    background: #FFB400;
+    height: 8px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #3751FF;
+}
+
+/* Grid Sections */
+.grid {
+    display: flex;
+    gap: 10px;
+}
+
+.grid .section {
+    flex: 1;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #3751FF;
+    color: white;
+}
+
+td {
+    background: #f8f8f8;
+}
+
+/* UN Goals */
+.un-goals {
+    text-align: center;
+}
+
+.goal-icons img {
+    width: 50px;
+    margin: 5px;
+}
+
+/* Contact Form */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #3751FF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #FFB400;
+}
