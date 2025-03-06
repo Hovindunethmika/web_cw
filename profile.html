@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -25,20 +26,40 @@
 
         <h3>Skills</h3>
         <div class="skill-bar">
-            <p>Communication</p>
-            <div class="bar"><div class="fill" style="width: 80%;"></div></div>
+            <p>
+                <span>Communication</span>
+                <span class="skill-percentage">80%</span>
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 80%;"></div>
+            </div>
         </div>
         <div class="skill-bar">
-            <p>Team working</p>
-            <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+            <p>
+                <span>Team working</span>
+                <span class="skill-percentage">70%</span>
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 70%;"></div>
+            </div>
         </div>
         <div class="skill-bar">
-            <p>IT</p>
-            <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+            <p>
+                <span>IT</span>
+                <span class="skill-percentage">90%</span>
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 90%;"></div>
+            </div>
         </div>
         <div class="skill-bar">
-            <p>Presentation</p>
-            <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+            <p>
+                <span>Presentation</span>
+                <span class="skill-percentage">60%</span>
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 60%;"></div>
+            </div>
         </div>
     </div>
 
@@ -97,75 +118,52 @@
                 <div class="icon calendar-icon"></div>
                 <h2>Volunteering availability</h2>
             </div>
-            <div class="calendar-container">
-                <div class="availability-calendar">
-                    <table class="availability-table">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
-                            <th>Sat</th>
-                            <th>Sun</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Morning</td>
-                            <td class="available">✓</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="available">✓</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Afternoon</td>
-                            <td></td>
-                            <td></td>
-                            <td class="available">✓</td>
-                            <td></td>
-                            <td class="available">✓</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Evening</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="booking-interface">
-                    <div class="calendar-widget">
-                        <div class="month-selector">
-                            <span>April 2023</span>
-                        </div>
-                        <div class="calendar-grid">
-                            <!-- Calendar days would go here -->
-                        </div>
-                    </div>
-                    <div class="time-slots">
-                        <div class="time-slot-header">Wednesday, April 19</div>
-                        <div class="time-slots-list">
-                            <div class="time-slot selected">12:00pm</div>
-                            <div class="time-slot">1:00pm</div>
-                            <div class="time-slot">2:00pm</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <table class="availability-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Morning</td>
+                        <td class="available">✓</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="available">✓</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Afternoon</td>
+                        <td></td>
+                        <td></td>
+                        <td class="available">✓</td>
+                        <td></td>
+                        <td class="available">✓</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Evening</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <!-- UN Goals Section -->
@@ -195,6 +193,30 @@
                 <textarea placeholder="Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
+            
+            <!-- Add the contact details table -->
+            <table class="contact-details-table">
+                <tr>
+                    <td>Email</td>
+                    <td><a href="mailto:jill.anderson@example.com">jill.anderson@example.com</a></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>+1 (123) 456-7890</td>
+                </tr>
+                <tr>
+                    <td>Office Address</td>
+                    <td>123 Main Street, Suite 400, New York, NY 10001</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td><a href="https://linkedin.com/in/jillanderson" target="_blank">linkedin.com/in/jillanderson</a></td>
+                </tr>
+                <tr>
+                    <td>Twitter</td>
+                    <td><a href="https://twitter.com/jillanderson" target="_blank">@jillanderson</a></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
