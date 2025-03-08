@@ -148,6 +148,49 @@ body {
     margin: 0;
 }
 
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.section-header .icon {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+}
+
+.section-header .icon::before {
+    font-family: "Material Icons";
+    font-size: 20px;
+}
+
+.goal-icon::before {
+    content: "⭐";
+}
+
+.frustration-icon::before {
+    content: "⚠️";
+}
+
+.calendar-icon::before {
+    content: "📅";
+}
+
+.un-icon::before {
+    content: "🌍";
+}
+
+.contact-icon::before {
+    content: "📧";
+}
+
 .bio {
     background: var(--light-green);
     color: var(--text-light);
@@ -168,57 +211,20 @@ body {
     line-height: 1.5;
 }
 
-/* Icons for sections */
-.section-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    border-radius: 5px;
-    background-color: var(--bg-light);
-}
-
-.goal-icon {
-    background-color: #f0f0f0;
-    background-image: url('');
-    background-size: cover;
-}
-
-.frustration-icon {
-    background-color: #f0f0f0;
-    background-image: url('');
-    background-size: cover;
-}
-
-.experience-icon {
-    background-color: #f0f0f0;
-    background-image: url('');
-    background-size: cover;
-}
-
-.calendar-icon, .un-icon, .contact-icon {
-    background-color: #f0f0f0;
-    background-image: url('');
-    background-size: cover;
-}
-
 /* Section Headers */
 .section h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--text-dark);
+    margin: 0;
 }
 
 /* Grid Sections */
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns */
     gap: 0;
+    min-height: 300px; /* Added minimum height */
 }
 
 .grid .section {
@@ -226,6 +232,9 @@ body {
     border-bottom: 1px solid #eee;
     transition: all 0.3s ease;
     cursor: pointer;
+    height: 100%; /* Make sections fill height */
+    display: flex;
+    flex-direction: column;
 }
 
 .grid .section:hover {
@@ -246,6 +255,7 @@ body {
 .section ul {
     padding-left: 20px;
     margin: 10px 0 0;
+    flex-grow: 1; /* Allow list to expand */
 }
 
 .section li {
@@ -318,9 +328,9 @@ body {
 }
 
 .goal-icons img {
-    width: 45px;
-    height: 45px;
-    margin: 0 5px;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
