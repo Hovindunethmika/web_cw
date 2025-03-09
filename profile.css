@@ -15,14 +15,15 @@ body {
     padding: 0;
     background: var(--bg-light);
     color: var(--text-dark);
+    padding-top: 55px; /* Adjust to match new header + navbar height */
 }
 
 /* Container Layout */
 .container {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 90px); /* Adjusted to account for header + navbar only */
     width: 100%;
-    margin: 0;
+    margin-top: 90px; /* Align with bottom of navbar */
     background: white;
     overflow: hidden;
 }
@@ -138,6 +139,7 @@ body {
     flex-direction: column;
     gap: 0;
     overflow-y: auto;
+    height: calc(100vh - 90px); /* Match container height */
 }
 
 .section {
@@ -222,30 +224,17 @@ body {
 /* Grid Sections */
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    min-height: 300px; /* Added minimum height */
+    min-height: 300px;
 }
 
 .grid .section {
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    height: 100%; /* Make sections fill height */
+    height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.grid .section:hover {
-    background: var(--bg-light);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.2);
-}
-
-.grid .section:active {
-    transform: translateY(0);
-    box-shadow: none;
 }
 
 .grid .section:last-child {
@@ -255,7 +244,7 @@ body {
 .section ul {
     padding-left: 20px;
     margin: 10px 0 0;
-    flex-grow: 1; /* Allow list to expand */
+    flex-grow: 1;
 }
 
 .section li {
@@ -266,11 +255,6 @@ body {
 /* Icon hover effect */
 .section-header .icon {
     transition: all 0.3s ease;
-}
-
-.grid .section:hover .icon {
-    background-color: var(--light-green);
-    color: var(--text-light);
 }
 
 /* Availability Section */
@@ -287,14 +271,16 @@ body {
     border-collapse: collapse;
     margin-top: 15px;
     background: white;
+    table-layout: fixed;
 }
 
 .availability-table th, 
 .availability-table td {
-    padding: 12px;
+    padding: 8px;
     text-align: center;
     border: 1px solid #eee;
-    font-size: 14px;
+    font-size: 13px;
+    width: calc(100% / 7);
 }
 
 .availability-table th {
@@ -305,7 +291,7 @@ body {
 
 .availability-table td:first-child {
     font-weight: 500;
-    text-align: left;
+    text-align: center;
     background: #f9f9f9;
 }
 
@@ -479,4 +465,64 @@ p {
 ul li {
     margin-bottom: 10px;
     line-height: 1.5;
+}
+
+/* Header adjustments */
+header {
+    background-color: rgb(12, 99, 6);
+    text-align: center;
+    padding: 15px;
+    color: white;
+    position: fixed; 
+    top: 0;
+    left: 0; /* Ensure header spans full width */
+    right: 0; /* Ensure header spans full width */
+    width: 100%;
+    z-index: 1001;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+footer {
+    background-color: rgb(12, 99, 6);
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 97.5%;
+    color: white;
+}
+
+/* Navbar adjustments */
+.navbar {
+    background: rgb(12, 99, 6);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 60px;
+    left: 0; /* Ensure navbar spans full width */
+    right: 0; /* Ensure navbar spans full width */
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    background: rgb(1, 124, 34);
+    border-radius: 5px;
+}
+
+.logo {
+    position: absolute;
+    left: 10px; 
+    width: 120px; 
+    height: auto;
 }
